@@ -4,6 +4,7 @@
     <div class="d-flex justify-content-center">
       <div class="card" style="width: 18rem;">
         <div class="card-body">
+          <input type="button" value="Add" />
           <h5 class="card-title">這是卡片1</h5>
           <p class="card-text">這是卡片，裡面有很多東西</p>
           <a href="#" class="btn btn-primary">Press</a>
