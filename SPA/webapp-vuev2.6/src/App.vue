@@ -1,13 +1,14 @@
 <template>
   <div id="app" class="container-fluid d-flex justify-content-center">
     <div class="container row p-3 container-bd">
-      <div class="col-md-124">
+      <div class="col-md-12">
         <img src="./assets/logo.png" style="width: 50px;" />
         <h4>{{ title }}</h4>
       </div>
       <div class="col-md-12 d-flex align-items-start">
-        <router-view />
+        <router-view class="view one" />
       </div>
+      <router-view name="dialog" />
     </div>
   </div>
 </template>

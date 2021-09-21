@@ -1,14 +1,14 @@
 <template>
-  <div class="flex-fill d-flex">
-    <div>
-      <button
-        type="button"
-        class="btn btn-dark"
-        v-on:click="addFormElement('text')"
-      >
-        Add User
-      </button>
-    </div>
+  <div class="flex-fill py-2 text-left">
+    <button
+      type="button"
+      id="add-user"
+      class="btn btn-dark"
+      data-toggle="modal"
+      data-target="#myModal"
+    >
+      <span>Add User</span>
+    </button>
     <div class="table-responsive"></div>
   </div>
 </template>
@@ -16,15 +16,17 @@
 <script>
 export default {
   name: "index",
-  data: {
-    fields: []
+  data() {
+    return { showModal: false };
   },
   methods: {
-    addFormElement: function(type) {
-      this.fields.push({
-        type: type,
-        placeholder: "Textbox"
+    addUser: function() {
+      console.log($(".modal"));
+      $("#myModal").modal({
+        backdrop: "static",
+        keyboard: false
       });
+      $("#myModal").modal("show");
     },
     deleteUser: function(index) {
       this.inputs.splice(index, 1);
